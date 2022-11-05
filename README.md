@@ -51,22 +51,16 @@ default: &default
   username: root
   password: KDglu#oKy8X1DT
   host: db
-
-development:
-  <<: *default
-  database: dev
-
-test:
-  <<: *default
-  database: dev
 ```
 
 **11. Run -**
 ```
- docker-compose up
+docker-compose run app rails db:create
+
+docker-compose up
 ```
 
 **12. Browse http://localhost:3002**
-![Ruby on rails 7.0.4 docker with mysql](https://i.ibb.co/Z19FNSJ/Screenshot-2022-07-30-at-9-11-24-PM.png)
+![Ruby on rails 7.0.4 docker with mysql](https://i.ibb.co/xJXVpLg/rails-compose.png)
 
-_*See docker documentarion https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/rails*_
+_*See docker documentation https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/rails*_
